@@ -67,7 +67,7 @@ wordGo.create("C:\\demo.docx");
 
 示例：`font-size:12`  `font-size:五号`
 
-![字号](D:\hello\wordgo\api\textapi.assets\字号.png)
+![字号](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E5%AD%97%E5%8F%B7.png?raw=true)
 
 
 
@@ -77,7 +77,7 @@ wordGo.create("C:\\demo.docx");
 
 示例：`font-family:宋体` `font-family:思源黑体`
 
-![字体](D:\hello\wordgo\api\textapi.assets\字体.png)
+![字体](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E5%AD%97%E4%BD%93.png?raw=true)
 
 
 
@@ -113,7 +113,7 @@ wordGo.create("C:\\demo.docx");
 
 示例：`background-color:yellow`   `background-color:red`
 
-![背景色](D:\hello\wordgo\api\textapi.assets\背景色.png)
+![背景色](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E8%83%8C%E6%99%AF%E8%89%B2.png?raw=true)
 
 
 
@@ -127,7 +127,7 @@ wordGo.create("C:\\demo.docx");
 
 对应关系：
 
-![下划线](D:\hello\wordgo\api\textapi.assets\下划线.png)
+![下划线](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E4%B8%8B%E5%88%92%E7%BA%BF.png?raw=true)
 
 
 
@@ -137,7 +137,7 @@ wordGo.create("C:\\demo.docx");
 
 示例：`text-decoration-color:#FF0000`  `text-decoration-color:#008000`  `text-decoration-color:00FF00`
 
-![下划线颜色](D:\hello\wordgo\api\textapi.assets\下划线颜色.png)
+![下划线颜色](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E4%B8%8B%E5%88%92%E7%BA%BF%E9%A2%9C%E8%89%B2.png?raw=true)
 
 
 
@@ -147,7 +147,7 @@ wordGo.create("C:\\demo.docx");
 
 示例：`font-emphasis:point`  `font-emphasis:normal`
 
-![着重号](D:\hello\wordgo\api\textapi.assets\着重号.png)
+![着重号](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E7%9D%80%E9%87%8D%E5%8F%B7.png?raw=true)
 
 #### font-scale 文字水平缩放
 
@@ -155,7 +155,7 @@ wordGo.create("C:\\demo.docx");
 
 示例：`font-scale:90`  `font-scale:50%`
 
-![缩放](D:\hello\wordgo\api\textapi.assets\缩放.png)
+![缩放](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E7%BC%A9%E6%94%BE.png?raw=true)
 
 
 
@@ -167,7 +167,7 @@ wordGo.create("C:\\demo.docx");
 
 示例：`line-height:150%`  `line-height:18pt`
 
-![行距](D:\hello\wordgo\api\textapi.assets\行距.png)
+![行距](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E8%A1%8C%E8%B7%9D.png?raw=true)
 
 
 
@@ -177,7 +177,7 @@ wordGo.create("C:\\demo.docx");
 
 示例：`text-align:center`
 
-![对齐](D:\hello\wordgo\api\textapi.assets\对齐.png)
+![对齐](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E5%AF%B9%E9%BD%90.png?raw=true)
 
 
 
