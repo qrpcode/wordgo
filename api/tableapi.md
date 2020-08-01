@@ -81,6 +81,30 @@ wordTable.merge(2, 4, 4 ,5);
 
 
 
+### 添加表格到word
+
+wordGo中有两个方法都可以添加表格，底层实现没区别，用哪个看习惯即可
+
+`add(WordTable)`   和   `addTable(wordTable)`
+
+```java
+WordGo wordGo = new WordGo();
+wordGo.add("Hello", "font-size: 20");
+//...
+WordTable wordTable = new WordTable(5, 6, "column-width:1=50%; template: normal2; width:50%");
+//创建一个表格
+wordTable.merge(2, 4, 4 ,5);
+//合并表格
+wordTable.add(2, 3, "aaa", "bbb", "ccc");
+//填充数据
+wordGo.add(wordTable);
+//添加到word中
+//...
+wordGo.create("C:\\demo.docx");
+```
+
+
+
 ### 支持样式
 
 图片和文字样式和正常使用一样，这里仅介绍表格样式支持的样式

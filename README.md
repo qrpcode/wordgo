@@ -10,12 +10,6 @@
 
 ### .
 
-### .
-
-### .
-
-### .
-
 # Word GO
 
 WordGO - 让Java生成word文档更容易
@@ -34,7 +28,7 @@ WordGO - 让Java生成word文档更容易
 
 兼容性请看表：
 
-![我的兼容性](https://gitee.com/qiruipeng/qiruipeng/raw/master/img/jianrong.png)
+![我的兼容性](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/jianrong.png?raw=true)
 
 ### 使用
 
@@ -42,8 +36,11 @@ WordGO - 让Java生成word文档更容易
 
 ```java
 WordGo wordGo = new WordGo();
+//新建一个word
 wordGo.add("Hello World", "font-size: 15; color: #FF0000; background-color: blue;");
+//填充数据可以查看对应功能说明
 wordGo.create("C:\\demo.docx");
+//最后生成即可，参数是生成目录，必须带文件名且以.docx结尾
 ```
 
 是的，它和Css写法很类似，很容易上手~~
@@ -56,11 +53,11 @@ wordGo.create("C:\\demo.docx");
 
 👉 设置纸张大小和边距
 
-👉 添加文字有关操作
+👉 [添加文字有关操作](https://github.com/qrpcode/wordgo/blob/master/api/textapi.md)
 
-👉 设置和添加表格有关操作
+👉 [设置和添加表格有关操作](https://github.com/qrpcode/wordgo/blob/master/api/tableapi.md)
 
-👉 添加图片有关操作
+👉 [添加图片有关操作](https://github.com/qrpcode/wordgo/blob/master/api/imgapi.md)
 
 👉 页眉页脚有关操作
 
@@ -82,4 +79,4 @@ wordGo.create("C:\\demo.docx");
 
 
 
-### 如果觉得有用记得点 Star⭐
+### 💖 如果觉得有用记得点 Star⭐
