@@ -2,19 +2,19 @@
 
 ### 感谢关注！
 
+### .
 
+### .
 
+### .
 
+### .
 
+### .
 
+### .
 
-
-
-
-
-
-
-
+### .
 
 # Word GO
 
@@ -38,12 +38,12 @@ WordGO - 让Java生成word文档更容易
 
 ### 使用
 
-来，我们先来创建一个“Hello World”
+来，导入了jar包，我们先来创建一个“Hello World”
 
 ```java
 WordGo wordGo = new WordGo();
 wordGo.add("Hello World", "font-size: 15; color: #FF0000; background-color: blue;");
-wordGo.addFoot(foot);
+wordGo.create("C:\\demo.docx");
 ```
 
 是的，它和Css写法很类似，很容易上手~~
