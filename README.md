@@ -15,7 +15,7 @@ WordGO - 让Java生成word文档更容易
 
 兼容性请看表：
 
-![我的兼容性](D:\hello\wordgo\README.assets\我的兼容性.png)
+![我的兼容性](https://gitee.com/qiruipeng/qiruipeng/raw/master/img/jianrong.png)
 
 ### 使用
 
