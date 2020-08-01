@@ -37,7 +37,7 @@ wordTable.merge(2, 4, 4 ,5);
 
 成功和失败示例：
 
-![单元格合并](C:\Users\Administrator\Desktop\单元格合并.png)
+![单元格合并](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E5%8D%95%E5%85%83%E6%A0%BC%E5%90%88%E5%B9%B6.png?raw=true)
 
 ### 填充数据
 
@@ -53,7 +53,7 @@ wordTable.merge(2, 4, 4 ,5);
 
 示例2（右）：`wordTable.add(3, 1, "aa", "bb", "cc")`
 
-![合并左上用](C:\Users\Administrator\Desktop\合并左上用.png)
+![合并左上用](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E5%90%88%E5%B9%B6%E5%B7%A6%E4%B8%8A%E7%94%A8.png?raw=true)
 
 #### 添加图片
 
@@ -91,11 +91,11 @@ wordTable.merge(2, 4, 4 ,5);
 
 示例：`template:normal3`
 
-![表格列表](C:\Users\Administrator\Desktop\表格列表.png)
+![表格列表](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E8%A1%A8%E6%A0%BC%E5%88%97%E8%A1%A8.png?raw=true)
 
 详细样式是什么样子可以在Microsoft Word查看：
 
-![表格样式](C:\Users\Administrator\Desktop\表格样式.png)
+![表格样式](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E8%A1%A8%E6%A0%BC%E6%A0%B7%E5%BC%8F.png?raw=true)
 
 
 
