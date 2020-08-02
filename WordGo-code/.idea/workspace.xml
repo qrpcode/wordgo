@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="GROUP_BY_SEVERITY" value="true" />
+  </component>
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="wordgo" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5be1b28a-234d-4c12-bda3-903cd5ebfddd" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1f8JkfTeHr2tVTPV8OumSMFiimH" />
+  <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="wordgo" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\javaClass\wordgo\wordgo\src\main\resources\word\theme" />
+      <recent name="D:\javaClass\wordgo\wordgo\src\main\resources" />
+      <recent name="D:\javaClass\wordgo\wordgo\src\main\resources\docProps" />
+      <recent name="D:\javaClass\wordgo\wordgo\src\main\resources\res" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.qrpcode.domain" />
+      <recent name="com.github.qrpcode.util" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\javaClass\wordgo\wordgo\src\main\resources\style" />
+      <recent name="D:\javaClass\wordgo\wordgo\src\main\resources\word" />
+      <recent name="D:\javaClass\wordgo\wordgo\src\main\resources\docProps" />
+      <recent name="D:\javaClass\wordgo\wordgo\src\main\resources\word\_rels" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.qrpcode.main.Main" />
+      <module name="wordgo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.qrpcode.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5be1b28a-234d-4c12-bda3-903cd5ebfddd" name="Default Changelist" comment="" />
+      <created>1595593930783</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595593930783</updated>
+      <workItem from="1595593936064" duration="8732000" />
+      <workItem from="1595633958593" duration="22731000" />
+      <workItem from="1595667361824" duration="4501000" />
+      <workItem from="1595676312105" duration="12715000" />
+      <workItem from="1595689596372" duration="37426000" />
+      <workItem from="1595807095662" duration="30201000" />
+      <workItem from="1595855599345" duration="5853000" />
+      <workItem from="1595891118589" duration="16428000" />
+      <workItem from="1595920511114" duration="9301000" />
+      <workItem from="1595940929740" duration="5422000" />
+      <workItem from="1595984630266" duration="10637000" />
+      <workItem from="1596007214531" duration="8454000" />
+      <workItem from="1596021462663" duration="9907000" />
+      <workItem from="1596067269983" duration="34289000" />
+      <workItem from="1596152958779" duration="26821000" />
+      <workItem from="1596198624349" duration="5205000" />
+      <workItem from="1596240813338" duration="2211000" />
+      <workItem from="1596243583327" duration="33027000" />
+      <workItem from="1596327834538" duration="2339000" />
+      <workItem from="1596332180296" duration="1342000" />
+      <workItem from="1596334501448" duration="5391000" />
+      <workItem from="1596340701405" duration="6900000" />
+      <workItem from="1596356061375" duration="15129000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
