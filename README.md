@@ -49,11 +49,11 @@ wordGo.create("C:\\demo.docx");
 
 #### 对应功能说明（10分钟就能学会）
 
-👉 WordGO 构造和生成文件
+👉 [WordGO 构造和生成文件](https://github.com/qrpcode/wordgo/blob/master/api/wordgoapi.md)
 
-👉 设置文档属性信息
+👉 [设置文档属性信息](https://github.com/qrpcode/wordgo/blob/master/api/coreapi.md)
 
-👉 设置纸张大小和边距
+👉 [设置纸张大小和边距](https://github.com/qrpcode/wordgo/blob/master/api/paperapi.md)
 
 👉 [文字、换页有关操作](https://github.com/qrpcode/wordgo/blob/master/api/textapi.md)
 
@@ -61,7 +61,7 @@ wordGo.create("C:\\demo.docx");
 
 👉 [图片有关操作](https://github.com/qrpcode/wordgo/blob/master/api/imgapi.md)
 
-👉 页眉页脚有关操作
+👉 [页眉页脚有关操作](https://github.com/qrpcode/wordgo/blob/master/api/paperoutapi.md)
 
 ### 主要项目负责人
 

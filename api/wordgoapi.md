@@ -60,7 +60,7 @@ wordPaper  纸张对象，具体创建请参考WordPaper介绍。
 
 `addImg(String uri, String css)`
 
-👉 页眉页脚有关操作
+👉 [页眉页脚有关操作](https://github.com/qrpcode/wordgo/blob/master/api/paperoutapi.md)
 
 `addHead(PaperOut header)`
 
