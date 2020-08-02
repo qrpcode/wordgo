@@ -586,7 +586,7 @@ public class WordFileUtilImpl implements WordFileUtil{
         IoUtil.wordStyleCreate(tempPath);
         IoUtil.writeTextToFile(tempPath + s + "docProps" + s + "core.xml", core);
         IoUtil.writeTextToFile(tempPath + s + "word" + s + "document.xml", wordXml);
-        IoUtil.zipMultiFile(tempPath,fileWay, false);
+        IoUtil.zipMultiFile(tempPath,fileWay);
         IoUtil.deleteFile(new File(tempPath));
     }
 }

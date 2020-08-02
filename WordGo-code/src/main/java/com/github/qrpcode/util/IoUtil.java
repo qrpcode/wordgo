@@ -75,16 +75,26 @@ public class IoUtil {
     }
 
     private static void copyFile(String copyFile, String newFile) throws Exception {
-        FileInputStream fis = new FileInputStream(copyFile);
-
-        FileOutputStream fos = new FileOutputStream(newFile, true);
-        byte[] bytes = new byte[1024];
-        int len = 0;
-        while((len = fis.read(bytes)) != -1){
-            fos.write(bytes, 0, len);
+        FileInputStream fis = null;
+        FileOutputStream fos = null;
+        try{
+            fis = new FileInputStream(copyFile);
+            fos = new FileOutputStream(newFile, true);
+            byte[] bytes = new byte[1024];
+            int len = 0;
+            while((len = fis.read(bytes)) != -1){
+                fos.write(bytes, 0, len);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }finally {
+            if(fos != null){
+                fos.close();
+            }
+            if(fis != null){
+                fis.close();
+            }
         }
-        fos.close();
-        fis.close();
     }
 
     private void copyFileJar(String copyFile, String newFile){
@@ -98,10 +108,12 @@ public class IoUtil {
      * @return 返回文件内容
      */
     StringBuilder readFileJar(String uri){
+        InputStream is = null;
+        BufferedReader br = null;
         try {
             uri = uri.replace("\\", "/");
-            InputStream is = IoUtil.class.getClass().getResourceAsStream(uri);
-            BufferedReader br = new BufferedReader(new InputStreamReader(is));
+            is = IoUtil.class.getClass().getResourceAsStream(uri);
+            br = new BufferedReader(new InputStreamReader(is));
             StringBuilder file = new StringBuilder();
             String s = "";
             while((s = br.readLine())!=null){
@@ -111,6 +123,21 @@ public class IoUtil {
         } catch (IOException e) {
             e.printStackTrace();
             return null;
+        }finally {
+            if(br != null){
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if(is != null){
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
@@ -171,10 +198,11 @@ public class IoUtil {
      * @param uri 文件路径
      * @return 文件内容
      */
-    static StringBuilder readFile(String uri){
+    private static StringBuilder readFile(String uri){
         StringBuilder result = new StringBuilder();
+        BufferedReader br = null;
         try{
-            BufferedReader br = new BufferedReader(new FileReader(uri));
+            br = new BufferedReader(new FileReader(uri));
             String s = null;
             while((s = br.readLine()) != null){
                 result.append(s);
@@ -182,29 +210,43 @@ public class IoUtil {
             br.close();
         }catch(Exception e){
             e.printStackTrace();
+        }finally {
+            if(br != null){
+                try {
+                    br.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         return result;
     }
 
-    public static void zipMultiFile(String filepath ,String zippath, boolean dirFlag) {
+    static void zipMultiFile(String filepath ,String zippath) {
+        ZipOutputStream zipOut = null;
         try {
             // 要被压缩的文件夹
             File file = new File(filepath);
             File zipFile = new File(zippath);
-            ZipOutputStream zipOut = new ZipOutputStream(new FileOutputStream(zipFile));
+            zipOut = new ZipOutputStream(new FileOutputStream(zipFile));
             if(file.isDirectory()){
                 File[] files = file.listFiles();
-                for(File fileSec:files){
-                    if(dirFlag){
-                        recursionZip(zipOut, fileSec, file.getName() + File.separator);
-                    }else{
+                if(files != null){
+                    for(File fileSec : files){
                         recursionZip(zipOut, fileSec, "");
                     }
                 }
             }
-            zipOut.close();
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            if(zipOut != null) {
+                try {
+                    zipOut.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
     }
 
@@ -226,13 +268,21 @@ public class IoUtil {
             }
         }else{
             byte[] buf = new byte[1024];
-            InputStream input = new FileInputStream(file);
-            zipOut.putNextEntry(new ZipEntry(baseDir + file.getName()));
-            int len;
-            while((len = input.read(buf)) != -1){
-                zipOut.write(buf, 0, len);
+            InputStream input = null;
+            try {
+                input = new FileInputStream(file);
+                zipOut.putNextEntry(new ZipEntry(baseDir + file.getName()));
+                int len;
+                while ((len = input.read(buf)) != -1) {
+                    zipOut.write(buf, 0, len);
+                }
+            }catch (Exception e){
+                e.printStackTrace();
+            }finally {
+                if(input != null){
+                    input.close();
+                }
             }
-            input.close();
         }
     }
 
@@ -302,7 +352,7 @@ public class IoUtil {
      * @return 宽度
      */
     static int getImgWidth(File file) {
-        InputStream is;
+        InputStream is = null;
         BufferedImage src;
         int ret = -1;
         try {
@@ -312,6 +362,14 @@ public class IoUtil {
             is.close();
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            if(is != null){
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         return ret;
     }
@@ -323,7 +381,7 @@ public class IoUtil {
      * @return 高度
      */
     static int getImgHeight(File file) {
-        InputStream is;
+        InputStream is = null;
         BufferedImage src;
         int ret = -1;
         try {
@@ -333,6 +391,14 @@ public class IoUtil {
             is.close();
         } catch (Exception e) {
             e.printStackTrace();
+        }finally {
+            if(is != null) {
+                try {
+                    is.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
         return ret;
     }
