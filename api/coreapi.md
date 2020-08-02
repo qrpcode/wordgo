@@ -49,9 +49,9 @@ creator  文章作者信息
 
 Microsoft Office查看：
 
-![msoffice查看属性](C:\Users\Administrator\Desktop\msoffice查看属性.png)
+![msoffice查看属性](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/msoffice%E6%9F%A5%E7%9C%8B%E5%B1%9E%E6%80%A7.png?raw=true)
 
 WPS查看：
 
-![Wps查看文件属性](C:\Users\Administrator\Desktop\Wps查看文件属性.png)
+![Wps查看文件属性](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/Wps%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7.png?raw=true)
 
