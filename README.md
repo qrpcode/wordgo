@@ -37,7 +37,7 @@ WordGO - 让Java生成word文档更容易
 ```java
 WordGo wordGo = new WordGo();
 //新建一个word
-wordGo.add("Hello World", "font-size: 15; color: #FF0000; background-color: blue;");
+wordGo.add("Hello World", "font-size: 15; color: #FF0000");
 //填充数据可以查看对应功能说明
 wordGo.create("C:\\demo.docx");
 //最后生成即可，参数是生成目录，必须带文件名且以.docx结尾
@@ -49,15 +49,17 @@ wordGo.create("C:\\demo.docx");
 
 #### 对应功能说明（10分钟就能学会）
 
-👉 设置文件作者和摘要
+👉 WordGO 构造和生成文件
+
+👉 设置文档属性信息
 
 👉 设置纸张大小和边距
 
-👉 [添加文字有关操作](https://github.com/qrpcode/wordgo/blob/master/api/textapi.md)
+👉 [文字、换页有关操作](https://github.com/qrpcode/wordgo/blob/master/api/textapi.md)
 
-👉 [设置和添加表格有关操作](https://github.com/qrpcode/wordgo/blob/master/api/tableapi.md)
+👉 [创建、填充、添加表格有关操作](https://github.com/qrpcode/wordgo/blob/master/api/tableapi.md)
 
-👉 [添加图片有关操作](https://github.com/qrpcode/wordgo/blob/master/api/imgapi.md)
+👉 [图片有关操作](https://github.com/qrpcode/wordgo/blob/master/api/imgapi.md)
 
 👉 页眉页脚有关操作
 
@@ -69,7 +71,7 @@ wordGo.create("C:\\demo.docx");
 
 没错，我也觉得我代码写的 ~~有点~~ (十分) 乱
 
-来帮帮我吧，Fork之后pull request一下就可以啦~
+来帮帮我吧，Fork 之后 pull request 一下就可以啦~
 
 ### 开源协议
 
