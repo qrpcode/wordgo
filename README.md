@@ -1,19 +1,21 @@
 # Word GO
 
-WordGO - 让Java生成word文档更容易
+WordGO - Making it easier for Java to generate word documents
 
-### 项目背景
+【choose language：中文介绍】
 
-传统的Java生成word通常需要先手动创建模板文件，之后导入。如果不希望创建模板，还想少些点代码，选Word GO是个好主意~~
+### Background
 
-### 安装
+In traditional Java Word generation, template files are usually created manually and then imported. If you don't want to create a template and want less code, it's a good idea to choose Word Go~~
 
-#### 手动导入jar包
+### Installation
 
-* IDEA导入：点击File-Project Structure；然后在左侧找到Modules并点击；最后在右侧点击绿色的+号，选择JARs or directories选取要导入的jar包即可。
-* Eclipse导入：右击“项目”→选择Properties，在弹出的对话框左侧列表中选择Java Build Path
+#### Manually import the jar package
 
-#### maven中央仓库导入
+* IDEA import: Click File-Project Structure; then find Modules on the left and click; finally, click the green + sign on the right, select JARs or directories and select the jar package to be imported.
+* Eclipse import: right-click "Project" → select Properties, select Java Build Path in the list on the left side of the pop-up dialog box
+
+#### maven import
 
 ```xml
 <dependency>
@@ -23,69 +25,71 @@ WordGO - 让Java生成word文档更容易
 </dependency>
 ```
 
-### 环境依赖和兼容性
+### Environment dependency and compatibility
 
-只要能运行java这个就能用，他不依赖于任何第三方Office应用
+It can be used as long as it can run java, it does not rely on any third-party Office applications
 
-兼容性请看表：
+See the table for compatibility:
 
-![我的兼容性](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/jianrong.png?raw=true)
+![我的兼容性](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/enjianrong.png?raw=true)
 
-### 使用
+### Use
 
-来，导入了jar包，我们先来创建一个“Hello World”
+Let’s create a "Hello World" first
 
 ```java
 WordGo wordGo = new WordGo();
-//新建一个word
+//Create a new word
 wordGo.add("Hello World", "font-size: 15; color: #FF0000");
-//填充数据可以查看对应功能说明
+//Fill in the data to view the corresponding function description
 wordGo.create("C:\\demo.docx");
-//最后生成即可，参数是生成目录，必须带文件名且以.docx结尾
+//Finally, it can be generated. The parameter is the generation directory, which must have a file name and end with. Docx
 ```
 
-是的，它和Css写法很类似，很容易上手~~
+Yes, it is very similar to Css, it is easy to use~~
 
-代码支持JDK1.5 +（含）
+Code support JDK1.5 + (inclusive)
 
-#### 对应功能说明（10分钟就能学会）
+#### Corresponding function description
 
-👉 [WordGO 构造和生成文件](https://github.com/qrpcode/wordgo/blob/master/api/wordgoapi.md)
+####  (can be learned in 10 minutes)
 
-👉 [设置文档属性信息](https://github.com/qrpcode/wordgo/blob/master/api/coreapi.md)
+👉 [WordGO Construct and generate files](https://github.com/qrpcode/wordgo/blob/master/api/wordgoapi.md)
 
-👉 [设置纸张大小和边距](https://github.com/qrpcode/wordgo/blob/master/api/paperapi.md)
+👉 [Set document attribute information](https://github.com/qrpcode/wordgo/blob/master/api/coreapi.md)
 
-👉 [文字、换页有关操作](https://github.com/qrpcode/wordgo/blob/master/api/textapi.md)
+👉 [Set paper size and margins](https://github.com/qrpcode/wordgo/blob/master/api/paperapi.md)
 
-👉 [创建、填充、添加表格有关操作](https://github.com/qrpcode/wordgo/blob/master/api/tableapi.md)
+👉 [Text, page change related operations](https://github.com/qrpcode/wordgo/blob/master/api/textapi.md)
 
-👉 [图片有关操作](https://github.com/qrpcode/wordgo/blob/master/api/imgapi.md)
+👉 [Create, fill, and add tables related operations](https://github.com/qrpcode/wordgo/blob/master/api/tableapi.md)
 
-👉 [页眉页脚有关操作](https://github.com/qrpcode/wordgo/blob/master/api/paperoutapi.md)
+👉 [Picture related operations](https://github.com/qrpcode/wordgo/blob/master/api/imgapi.md)
 
-### 主要项目负责人
+👉 [Header and footer related operations](https://github.com/qrpcode/wordgo/blob/master/api/paperoutapi.md)
+
+### Main project leader
 
 [@qrpcode](https://github.com/qrpcode)
 
-### 参与
+### Join
 
-没错，我也觉得我代码写的 ~~有点~~ (十分) 乱
+Yes, I also think the code written by me is ~~a bit~~ (very) messy
 
-来帮帮我吧，Fork 之后 pull request 一下就可以啦~
+Come and help me, just pull request after Fork~
 
-### 开源协议
+### Open source agreement
 
 [Apache-2.0 License](https://github.com/qrpcode/wordgo/blob/master/LICENSE)
 
-（也就是说他是可以商用的，详细看协议吧~~）
+(In other words, it can be commercialized, please see the agreement in detail~~)
 
 
 
-### 💖 如果觉得有用记得点 Star⭐
+### 💖 If you find it useful, remember to star ⭐
 
 
 
-> PS：欢迎下载试用，如果需要应用于商业项目中请务必**先提前测试所有有可能试用的功能**，以免出现**生成偏差**。
+> PS：Welcome to download and try it out. If you need to apply it to commercial projects, please be sure to **test all possible functions in advance** to avoid **generation deviation**.
 >
-> 发现bug随时留言即可！
+> Feel free to leave a message if you find a bug!
