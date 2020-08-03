@@ -8,7 +8,20 @@ WordGO - 让Java生成word文档更容易
 
 ### 安装
 
-目前仅支持手动导入jar包，准确的来说我正在申请maven收录
+#### 手动导入jar包
+
+* IDEA导入：点击File-Project Structure；然后在左侧找到Modules并点击；最后在右侧点击绿色的+号，选择JARs or directories选取要导入的jar包即可。
+* Eclipse导入：右击“项目”→选择Properties，在弹出的对话框左侧列表中选择Java Build Path
+
+#### maven中央仓库导入
+
+```xml
+<dependency>
+ <groupId>com.github.qrpcode</groupId>
+ <artifactId>wordgo</artifactId>
+ <version>1.0-SNAPSHOT</version>
+</dependency>
+```
 
 ### 环境依赖和兼容性
 
