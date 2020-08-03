@@ -2,7 +2,7 @@
 
 WordGO - Making it easier for Java to generate word documents
 
-【choose language：中文介绍】
+【choose language：[中文介绍](https://github.com/qrpcode/wordgo/blob/master/README_CN.md)】
 
 ### Background
 
