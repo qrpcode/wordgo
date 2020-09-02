@@ -62,6 +62,18 @@ public class WordFileUtilImpl implements WordFileUtil{
             }
         }
 
+        /*
+        这里是一个BUG的临时修改方法
+        通过map删除干净判断是否完成经常会导致部分属性没有生效，原因是map先删除后解析
+        可能存在map删除了但是解析尚未完成情况
+        我会尽快修改掉这个奇怪的地方，但是这里延迟删掉就会出错
+        */
+        try {
+            Thread.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         StringBuilder cssXml = textUtil.getXml();
         //清除未匹配内容
         StrUtil.cleanNoMarry(cssXml);
@@ -177,6 +189,17 @@ public class WordFileUtilImpl implements WordFileUtil{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+        }
+        /*
+        这里是一个BUG的临时修改方法
+        通过map删除干净判断是否完成经常会导致部分属性没有生效，原因是map先删除后解析
+        可能存在map删除了但是解析尚未完成情况
+        我会尽快修改掉这个奇怪的地方，但是这里延迟删掉就会出错
+        */
+        try {
+            Thread.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         //第八步：清理没有赋值的标签
         StrUtil.cleanImgNoMarry(xml);
@@ -469,7 +492,7 @@ public class WordFileUtilImpl implements WordFileUtil{
                                         List<String> paperHeadCss, StringBuilder paperFootContext, StringBuilder paperFootContextCss,
                                         List<String> paperFootImg, List<String> paperFootImgCss, List<String> paperFootText,
                                         List<String> paperFootCss, int paperWidth, int paddingLeft, int paddingRight,
-                                        int paperHeight, int paperHead, int paperBottom,  ExecutorService es){
+                                        int paperHeight, int paperHead, int paperBottom, ExecutorService es){
         String uri = new IoUtil().getUri();
         String s = File.separator;
         IoUtil ioUtil = new IoUtil();

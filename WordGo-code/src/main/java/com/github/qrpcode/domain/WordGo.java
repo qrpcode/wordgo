@@ -83,7 +83,7 @@ public class WordGo {
     }
 
     public void addLine(String text, String css){
-        add(text + "\\n", css);
+        add(text + "\n", css);
     }
 
     public void add(String text, String css){
