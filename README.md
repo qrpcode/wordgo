@@ -1,6 +1,8 @@
 # Word GO
 
-WordGO - 让Java生成word文档更容易
+WordGO - 让Java生成word文档更容易.
+
+【choose language：[English](https://github.com/qrpcode/wordgo/blob/master/README_EN.md)】
 
 ### 项目背景
 
@@ -29,7 +31,20 @@ WordGO - 让Java生成word文档更容易
 
 兼容性请看表：
 
-![我的兼容性](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/jianrong.png?raw=true)
+| 分类     | 软件名称         | 兼容性说明                                                   |
+| -------- | ---------------- | ------------------------------------------------------------ |
+| 桌面版   | *Microsoft* Word | 完美兼容                                                     |
+|          | WPS              | 完美兼容                                                     |
+|          | 永中Office       | 完美兼容                                                     |
+| 在线版   | 金山文档         | 该系统本身对部分属性不支持                                   |
+|          | 腾讯文档         | 该系统本身对部分属性不支持                                   |
+|          | 石墨文档         | 该系统本身对部分属性不支持，偶尔可能提醒文档需要修复，但能正常导入和显示 |
+| 其他常用 | 手机QQ           | 该系统本身对部分属性不支持                                   |
+|          | 手机微信         | 该系统本身对部分属性不支持                                   |
+
+[注] 经过测试，石墨文档应该不是用xml解析的，似乎是字符串截取的，正在努力适配~
+
+
 
 ### 使用
 
@@ -84,9 +99,13 @@ wordGo.create("C:\\demo.docx");
 
 ### 💖 如果觉得有用记得点 Star⭐
 
+.
 
 
-#### 当前仍为快照版，还存在较多bug，<u>不建议用于生产环境</u>
+
+### 当前仍为快照版，还存在较多bug，
+
+### <u>不建议用于生产环境</u>
 
 发现BUG随时发邮件到  i@qiruipeng.com  我会尽快回复和修复的哟~~
 
