@@ -1,21 +1,19 @@
 # Word GO
 
-WordGO - Making it easier for Java to generate word documents
+WordGO - 让Java生成word文档更容易
 
-【choose language：[中文介绍](https://github.com/qrpcode/wordgo/blob/master/README_CN.md)】
+### 项目背景
 
-### Background
+传统的Java生成word通常需要先手动创建模板文件，之后导入。如果不希望创建模板，还想少些点代码，选Word GO是个好主意~~
 
-In traditional Java Word generation, template files are usually created manually and then imported. If you don't want to create a template and want less code, it's a good idea to choose Word Go~~
+### 安装
 
-### Installation
+#### 手动导入jar包
 
-#### Manually import the jar package
+* IDEA导入：点击File-Project Structure；然后在左侧找到Modules并点击；最后在右侧点击绿色的+号，选择JARs or directories选取要导入的jar包即可。
+* Eclipse导入：右击“项目”→选择Properties，在弹出的对话框左侧列表中选择Java Build Path
 
-* IDEA import: Click File-Project Structure; then find Modules on the left and click; finally, click the green + sign on the right, select JARs or directories and select the jar package to be imported.
-* Eclipse import: right-click "Project" → select Properties, select Java Build Path in the list on the left side of the pop-up dialog box
-
-#### maven import
+#### maven中央仓库导入
 
 ```xml
 <dependency>
@@ -25,71 +23,74 @@ In traditional Java Word generation, template files are usually created manually
 </dependency>
 ```
 
-### Environment dependency and compatibility
+### 环境依赖和兼容性
 
-It can be used as long as it can run java, it does not rely on any third-party Office applications
+只要能运行java这个就能用，他不依赖于任何第三方Office应用
 
-See the table for compatibility:
+兼容性请看表：
 
-![我的兼容性](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/enjianrong.png?raw=true)
+![我的兼容性](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/jianrong.png?raw=true)
 
-### Use
+### 使用
 
-Let’s create a "Hello World" first
+来，导入了jar包，我们先来创建一个“Hello World”
 
 ```java
 WordGo wordGo = new WordGo();
-//Create a new word
+//新建一个word
 wordGo.add("Hello World", "font-size: 15; color: #FF0000");
-//Fill in the data to view the corresponding function description
+//填充数据可以查看对应功能说明
 wordGo.create("C:\\demo.docx");
-//Finally, it can be generated. The parameter is the generation directory, which must have a file name and end with. Docx
+//最后生成即可，参数是生成目录，必须带文件名且以.docx结尾
 ```
 
-Yes, it is very similar to Css, it is easy to use~~
+是的，它和Css写法很类似，很容易上手~~
 
-Code support JDK1.5 + (inclusive)
+代码支持JDK1.5 +（含）
 
-#### Corresponding function description
+#### 对应功能说明（10分钟就能学会）
 
-####  (can be learned in 10 minutes)
+👉 [WordGO 构造和生成文件](https://github.com/qrpcode/wordgo/blob/master/api/wordgoapi.md)
 
-👉 [WordGO Construct and generate files](https://github.com/qrpcode/wordgo/blob/master/api/wordgoapi.md)
+👉 [设置文档属性信息](https://github.com/qrpcode/wordgo/blob/master/api/coreapi.md)
 
-👉 [Set document attribute information](https://github.com/qrpcode/wordgo/blob/master/api/coreapi.md)
+👉 [设置纸张大小和边距](https://github.com/qrpcode/wordgo/blob/master/api/paperapi.md)
 
-👉 [Set paper size and margins](https://github.com/qrpcode/wordgo/blob/master/api/paperapi.md)
+👉 [文字、换页有关操作](https://github.com/qrpcode/wordgo/blob/master/api/textapi.md)
 
-👉 [Text, page change related operations](https://github.com/qrpcode/wordgo/blob/master/api/textapi.md)
+👉 [创建、填充、添加表格有关操作](https://github.com/qrpcode/wordgo/blob/master/api/tableapi.md)
 
-👉 [Create, fill, and add tables related operations](https://github.com/qrpcode/wordgo/blob/master/api/tableapi.md)
+👉 [图片有关操作](https://github.com/qrpcode/wordgo/blob/master/api/imgapi.md)
 
-👉 [Picture related operations](https://github.com/qrpcode/wordgo/blob/master/api/imgapi.md)
+👉 [页眉页脚有关操作](https://github.com/qrpcode/wordgo/blob/master/api/paperoutapi.md)
 
-👉 [Header and footer related operations](https://github.com/qrpcode/wordgo/blob/master/api/paperoutapi.md)
-
-### Main project leader
+### 主要项目负责人
 
 [@qrpcode](https://github.com/qrpcode)
 
-### Join
+### 参与
 
-Yes, I also think the code written by me is ~~a bit~~ (very) messy
+没错，我也觉得我代码写的 ~~有点~~ (十分) 乱
 
-Come and help me, just pull request after Fork~
+来帮帮我吧，Fork 之后 pull request 一下就可以啦~
 
-### Open source agreement
+### 开源协议
 
 [Apache-2.0 License](https://github.com/qrpcode/wordgo/blob/master/LICENSE)
 
-(In other words, it can be commercialized, please see the agreement in detail~~)
+（也就是说他是可以商用的，详细看协议吧~~）
 
 
 
-### 💖 If you find it useful, remember to star ⭐
+### 💖 如果觉得有用记得点 Star⭐
 
 
 
-> PS：Welcome to download and try it out. If you need to apply it to commercial projects, please be sure to **test all possible functions in advance** to avoid **generation deviation**.
+#### 当前仍为快照版，还存在较多bug，<u>不建议用于生产环境</u>
+
+发现BUG随时发邮件到  i@qiruipeng.com  我会尽快回复和修复的哟~~
+
+> 已发现BUG：
 >
-> Feel free to leave a message if you find a bug!
+> 1. 样式表只写一个且属性为颜色的时候可能会无效
+> 2. addLine方法逻辑存在问题，部分时候可能无法正常换行
