@@ -107,7 +107,7 @@ wordGo.create("C:\\demo.docx");
 
 ### <u>不建议用于生产环境</u>
 
-发现BUG随时发邮件到  i@qiruipeng.com  我会尽快回复和修复的哟~~
+发现BUG滑动页面到最上方有一个【❕ issues】选项卡，留言后我就会尽快回复和修复啦~~
 
 
 
