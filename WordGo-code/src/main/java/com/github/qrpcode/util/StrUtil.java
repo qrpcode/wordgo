@@ -63,8 +63,9 @@ class StrUtil {
         int oldIndex = 0;
         try {
             while (oldStr != null && !"".equals(oldStr) && sb.indexOf(oldStr, oldIndex) > -1) {
+                int oldIndexTemp = sb.indexOf(oldStr, oldIndex);
                 sb.replace(sb.indexOf(oldStr, oldIndex), sb.indexOf(oldStr, oldIndex) + oldStr.length(), newStr);
-                oldIndex = sb.indexOf(oldStr, oldIndex) + 1;
+                oldIndex =  oldIndexTemp + 1;
             }
         }catch (Exception e){
             //e.printStackTrace();
@@ -170,13 +171,14 @@ class StrUtil {
      */
     static StringBuilder textChoose(String text){
         StringBuilder context = new StringBuilder(text);
-        while(context.indexOf(Docx.DOCX_AMP) > -1){
+//        防止 & 死循环
+        if(context.indexOf(Docx.DOCX_AMP) > -1){
             replace(context, Docx.DOCX_AMP, Docx.DOCX_AMP_CHOOSE);
         }
-        while(context.indexOf(Docx.DOCX_LT) > -1){
+        if(context.indexOf(Docx.DOCX_LT) > -1){
             replace(context, Docx.DOCX_LT, Docx.DOCX_LT_CHOOSE);
         }
-        while(context.indexOf(Docx.DOCX_GT) > -1){
+        if(context.indexOf(Docx.DOCX_GT) > -1){
             replace(context, Docx.DOCX_GT, Docx.DOCX_GT_CHOOSE);
         }
         return context;
