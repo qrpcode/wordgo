@@ -59,9 +59,12 @@ class StrUtil {
         //需要多线程解析的css：有些css样式会提前解析，因为他们嵌套了其他标签
         Lock l = new ReentrantLock();
         l.lock();
+//        防止 & 死循环
+        int oldIndex = 0;
         try {
-            while (oldStr != null && !"".equals(oldStr) && sb.indexOf(oldStr) > -1) {
-                sb.replace(sb.indexOf(oldStr), sb.indexOf(oldStr) + oldStr.length(), newStr);
+            while (oldStr != null && !"".equals(oldStr) && sb.indexOf(oldStr, oldIndex) > -1) {
+                sb.replace(sb.indexOf(oldStr, oldIndex), sb.indexOf(oldStr, oldIndex) + oldStr.length(), newStr);
+                oldIndex = sb.indexOf(oldStr, oldIndex) + 1;
             }
         }catch (Exception e){
             //e.printStackTrace();
