@@ -24,7 +24,7 @@ class StrUtil {
     private static final String[] FONT_LINE = {"single", "double", "thick", "dotted", "dash", "dotDash", "dotDotDash","wave"};
     private static final String[] STYLE_LABEL = {"@text-align@", "@font-family@", "@font-size@", "@font-weight@", "@font-style@",
             "@background-color@", "@color@", "@text-decoration@", "@font-emphasis@", "@font-scale@", "@line-height@",
-            "@text-decoration-color@"};
+            "@text-decoration-color@", "@text-indent@"};
     private static final String[] STYLE_IMG_LABEL = {"@left@", "@top@", "@height@", "@width@", "@margin-left@", "@margin-top@",
             "@margin-right@", "@margin-bottom@", "@title@", "@box-shadow@", "@reflection@", "@glow@", "@border@", "@rotate@",
             "@soft-edge@"};

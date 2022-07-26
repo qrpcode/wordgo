@@ -105,6 +105,8 @@ public class WordFileUtilImpl implements WordFileUtil{
         int fontSize = -1;
         String lineHeight = null;
         String textAlign = Css.TEXT_ALIGN_LEFT;
+        // 首行缩进距离
+        Integer textIndent = 0;
         for (int i = cssArray.length - 1 ; i >= 0 ; i--) {
             if(cssArray[i].toLowerCase().contains(Css.LINE_HEIGHT)){
                 String[] lineKeyValue = cssArray[i].toLowerCase().split(":");
@@ -121,6 +123,9 @@ public class WordFileUtilImpl implements WordFileUtil{
                 if(StrUtil.fontSizeToInt(sizeKeyValue[1]) > fontSize){
                     fontSize = StrUtil.fontSizeToInt(sizeKeyValue[1]);
                 }
+            }else if(cssArray[i].toLowerCase().contains(Css.TEXT_INDENT)){
+                String[] sizeKeyValue = cssArray[i].toLowerCase().split(":");
+                textIndent = Integer.parseInt(sizeKeyValue[1].trim());
             }
         }
         //如果用户没设置字体但是设置了行距，将字体锁定为五号字
@@ -134,6 +139,9 @@ public class WordFileUtilImpl implements WordFileUtil{
         }
         if(!Css.TEXT_ALIGN_LEFT.equals(textAlign)){
             StrUtil.replace(xml, Css.A_TEXT_ALIGN_A, "<w:jc w:val=\"" + textAlign + "\"/>");
+        }
+        if (textIndent >= 0){
+            StrUtil.replace(xml, Css.A_TEXT_INDENT_A, "<w:ind w:firstLineChars=\"" + (100*textIndent) + "\" w:firstLine=\"" + (210*textIndent)+ "\"/>");
         }
         //清除未匹配内容
         StrUtil.cleanNoMarry(xml);
