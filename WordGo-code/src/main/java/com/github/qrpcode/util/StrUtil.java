@@ -59,9 +59,13 @@ class StrUtil {
         //需要多线程解析的css：有些css样式会提前解析，因为他们嵌套了其他标签
         Lock l = new ReentrantLock();
         l.lock();
+//        防止 & 死循环
+        int oldIndex = 0;
         try {
-            while (oldStr != null && !"".equals(oldStr) && sb.indexOf(oldStr) > -1) {
-                sb.replace(sb.indexOf(oldStr), sb.indexOf(oldStr) + oldStr.length(), newStr);
+            while (oldStr != null && !"".equals(oldStr) && sb.indexOf(oldStr, oldIndex) > -1) {
+                int oldIndexTemp = sb.indexOf(oldStr, oldIndex);
+                sb.replace(sb.indexOf(oldStr, oldIndex), sb.indexOf(oldStr, oldIndex) + oldStr.length(), newStr);
+                oldIndex =  oldIndexTemp + 1;
             }
         }catch (Exception e){
             //e.printStackTrace();
@@ -167,13 +171,14 @@ class StrUtil {
      */
     static StringBuilder textChoose(String text){
         StringBuilder context = new StringBuilder(text);
-        while(context.indexOf(Docx.DOCX_AMP) > -1){
+//        防止 & 死循环
+        if(context.indexOf(Docx.DOCX_AMP) > -1){
             replace(context, Docx.DOCX_AMP, Docx.DOCX_AMP_CHOOSE);
         }
-        while(context.indexOf(Docx.DOCX_LT) > -1){
+        if(context.indexOf(Docx.DOCX_LT) > -1){
             replace(context, Docx.DOCX_LT, Docx.DOCX_LT_CHOOSE);
         }
-        while(context.indexOf(Docx.DOCX_GT) > -1){
+        if(context.indexOf(Docx.DOCX_GT) > -1){
             replace(context, Docx.DOCX_GT, Docx.DOCX_GT_CHOOSE);
         }
         return context;

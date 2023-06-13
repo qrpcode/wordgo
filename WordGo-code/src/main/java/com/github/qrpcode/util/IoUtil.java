@@ -5,6 +5,8 @@ import com.github.qrpcode.config.Docx;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.net.URL;
+import java.net.URLClassLoader;
+import java.security.SecureRandom;
 import java.util.Random;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -65,7 +67,7 @@ public class IoUtil {
 
     private static String getRandomString(int length){
         String str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-        Random random=new Random();
+        SecureRandom random= new SecureRandom();
         StringBuffer sb=new StringBuffer();
         for(int i=0;i<length;i++){
             int number=random.nextInt(62);
@@ -112,7 +114,10 @@ public class IoUtil {
         BufferedReader br = null;
         try {
             uri = uri.replace("\\", "/");
-            is = IoUtil.class.getClass().getResourceAsStream(uri);
+//            修改获取资源方法
+//            is = IoUtil.class.getClass().getResourceAsStream(uri);
+//            is = IoUtil.class.getClassLoader().getResourceAsStream(uri);
+            is = IoUtil.class.getResourceAsStream(uri);
             br = new BufferedReader(new InputStreamReader(is));
             StringBuilder file = new StringBuilder();
             String s = "";
