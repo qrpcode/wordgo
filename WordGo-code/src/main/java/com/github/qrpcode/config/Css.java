@@ -32,6 +32,7 @@ public final class Css {
     public static final String TEXT_DECORATION_COLOR = "text-decoration-color";
     public static final String TEXT_ALIGN = "text-align";
     public static final String LINE_HEIGHT = "line-height";
+    public static final String TEXT_INDENT = "text-indent";
     public static final String NEW_LINE = "new-line";
     public static final String POSITION = "position";
     public static final String LEFT = "left";
@@ -57,6 +58,8 @@ public final class Css {
     public static final String A_TEXT_DECORATION_A = "@text-decoration@";
     public static final String A_TEXT_ALIGN_A = "@text-align@";
     public static final String A_LINE_HEIGHT_A = "@line-height@";
+    public static final String A_TEXT_INDENT_A = "@text-indent@";
+
 
     //***********   以下是图片的专属属性或固定值   ***********
 

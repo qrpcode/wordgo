@@ -179,6 +179,11 @@ wordGo.create("C:\\demo.docx");
 
 ![对齐](https://github.com/qrpcode/wordgo/blob/master/api/textapi.assets/%E5%AF%B9%E9%BD%90.png?raw=true)
 
+#### text-indent  首行缩进
+
+传入首行缩进的字符数，将自动实现段落首行缩进
+
+示例：`text-indent:2`
 
 
 ### 常见问题
