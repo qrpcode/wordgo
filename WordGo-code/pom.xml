@@ -110,7 +110,7 @@
         </repository>
         <repository>
             <id>zcy-release</id>
-            <url>http://dev-mvn.cai-inc.com/content/repositories/releases/</url>
+            <url>https://dev-mvn.cai-inc.com/content/repositories/releases/</url>
         </repository>
     </repositories>
     <distributionManagement>
